@@ -605,7 +605,7 @@ img {
     transparent 50%
   );
 }
-.privacy__rule-container{
+.privacy__rule-container {
   width: 50%;
   height: 50vh;
   overflow: auto;
@@ -613,7 +613,7 @@ img {
   padding: 1rem;
   text-align: center;
 }
-.go__back{
+.go__back {
   width: 25%;
   font-family: var(--second-font);
   font-size: var(--normal-font-size);
@@ -624,7 +624,7 @@ img {
   box-shadow: 0 8px 32px hsla(12, 32%, 8%, 0.3);
   align-items: center;
 }
-.go__back>a{
+.go__back > a {
   color: var(--white-color);
   border-radius: var(--border-section);
 }
