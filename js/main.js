@@ -25,7 +25,7 @@ const scrollActive = () => {
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 30,
+      sectionTop = current.offsetTop-50,
       sectionId = current.getAttribute("id"),
       sectionsClass = document.querySelector(
         ".nav__menu a[href*=" + sectionId + "]"
@@ -40,6 +40,20 @@ const scrollActive = () => {
 };
 window.addEventListener("scroll", scrollActive);
 // Scroll Reveal Animation
+const sr=ScrollReveal({
+  origin:'top',
+  distance:'60px',
+  duration:2500,
+  delay:400,
+  // reset:true //Animation repeat
+})
+sr.reveal(`.home__data,.products__data,.steps__content,.footer__container`)
+sr.reveal(`.home__img`,{origin:'bottom'})
+sr.reveal(`.products__card`,{inteval:100})
+sr.reveal(`.about__img .testimonial_img`,{origin:'right'})
+sr.reveal(`.about__data .testimonial_data`,{origin:'left'})
+
+
 
 // Contact Us Modal
 
@@ -51,7 +65,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When The User Click the Button Modal will Open
 btn.onclick = function () {
-  modal.style.display = "block";
+  modal.style.display = "inline-block";
 };
 
 // When User Click on Span (x) close the Modal
