@@ -136,22 +136,7 @@ img {
 .nav__logo img {
   width: 28px;
 }
-/* Navigation for mobile devices */
-@media screen and (max-width: 1023px) {
-  .nav__menu {
-    position: fixed;
-    bottom: 0;
-    background: linear-gradient(
-      180deg,
-      var(--first-color) 0%,
-      var(--first-color-alt) 100%
-    );
-    border-radius: 56px 56px 0 0;
-    box-shadow: 0 -2px 12px hsla(12, 32%, 12%, 0.3);
-    width: 100%;
-    padding: 1.25rem 4rem;
-  }
-}
+
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -633,8 +618,7 @@ img {
 .modal {
   display: none; /*Default Hidden */
   position: fixed; /*Stay in Place */
-  z-index: 1; /*Sit on Top */
-  left: 0;
+  z-index: 100; /*Sit on Top */
   top: 0;
   width: 100%;
   height: 100%;
@@ -644,7 +628,7 @@ img {
 }
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   padding: 20px;
   border: 1px solid #888;
   background-color: var(--first-color-alt);
@@ -652,7 +636,7 @@ img {
   animation-name: modalanimation;
   animation-duration: 0.5s;
 }
-#form>h2{
+#form > h2 {
   text-align: center;
 }
 @keyframes modalanimation {
@@ -675,4 +659,51 @@ img {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+#form > input,
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+#form>input,textarea{
+  background-color: var(--first-color-alt);
+  color: white;
+  font-family: var(--second-font);
+}
+#form > button {
+  margin-top: 4px;
+  padding: 8px;
+  outline: none;
+  width: 100%;
+  background-color: var(--first-color-alt);
+  color: white;
+  font-family: var(--second-font);
+  border: none;
+  box-shadow: 0 8px 32px hsla(12, 32%, 8%, 0.8);
+  cursor: pointer;
+}
+#form>button:hover{
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      var(--first-color) 0%,
+      var(--first-color-alt) 100%
+    );
+    border-radius: 56px 56px 0 0;
+    box-shadow: 0 -2px 12px hsla(12, 32%, 12%, 0.3);
+    width: 100%;
+    padding: 1.25rem 4rem;
+  }
+}
+@media screen and (min-width:100px) {
+  .modal-content{
+    margin: 73px auto;
+  }
 }
