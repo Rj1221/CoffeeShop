@@ -16,6 +16,24 @@
     <title>Nandani-Coffee-Shop-Drink-Once-Remember-Forever</title>
   </head>
   <body>
+    <!-- Trigger and Open The Modal -->
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="" id="form">
+          <h2>Contact Us</h2>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name" required/>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email" required/>
+          <label for="message">Message</label>
+          <textarea name="" id="message" cols="30" rows="10" required></textarea>
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
+    </div>
     <!-- Header -->
     <header class="header" id="header">
       <div class="header__border"></div>
@@ -51,7 +69,7 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">
+              <a href="#contact" class="nav__link" id="myBtn">
                 <i class="ri-phone-fill"></i>
                 <span>Contact</span>
               </a>
